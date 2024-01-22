@@ -1,4 +1,4 @@
-(()=> setInterval( () => {
+let timer = () => {
     let date = new Date();
     let hrs = date.getHours();
     let mins = date.getMinutes();
@@ -20,4 +20,5 @@
 
     document.getElementById("clock").innerText = time;
 
-}, 1000))();
+};
+timer();

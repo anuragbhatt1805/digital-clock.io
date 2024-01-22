@@ -20,32 +20,12 @@
                     <h1 id="clock" class="text-center text-primary"></h1>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button onclick="setInterval(timer(), 1000)">Start Watch</button>
+                </div>
+            </div>
         </div>
-        <script src="script.js">
-            (()=> setInterval( () => {
-    let date = new Date();
-    let hrs = date.getHours();
-    let mins = date.getMinutes();
-    let secs = date.getSeconds();
-    let period = "AM";
-
-    if(hrs == 0){
-        hrs = 12;
-    }else if(hrs >= 12){
-        hrs = hrs - 12;
-        period = "PM";
-    }
-
-    hrs = hrs < 10 ? `0${hrs}` : hrs;
-    mins = mins < 10 ? `0${mins}` : mins;
-    secs = secs < 10 ? `0${secs}` : secs;
-
-    let time = `${hrs}:${mins}:${secs} ${period}`;
-
-    document.getElementById("clock").innerText = time;
-
-}, 1000))();
-
-        </script>
+        <script src="script.js"></script>
 </body>
 </html>
