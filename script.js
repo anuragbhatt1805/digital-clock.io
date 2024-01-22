@@ -1,4 +1,4 @@
-(() => {
+(setInterval( () => {
     let date = new Date();
     let hrs = date.getHours();
     let mins = date.getMinutes();
@@ -19,5 +19,5 @@
     let time = `${hrs}:${mins}:${secs} ${period}`;
 
     document.getElementById("clock").innerText = time;
-    setTimeout(clock, 1000);
-})();
+
+}, 1000))();
